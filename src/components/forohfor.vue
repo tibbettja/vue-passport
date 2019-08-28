@@ -6,10 +6,10 @@
 
 <script>
 export default {
-  name: 'logout',
+  name: 'forohfor',
   data () {
     return {
-      message: 'You have been logged out.'
+      message: 'Page Not Found'
     }
   }
 }
@@ -25,4 +25,4 @@ p {
 button {
   padding: 10px 5px 10px 5px;
 }
-</style>
+</style>>

@@ -1,10 +1,12 @@
 <template>
   <div>
     <h1>Welcome to the example app!</h1>
+    <br/><br/><br/><br/>
     <p>
-      <button @click="goLogin">Log In</button>
+      <button @click="goRoute('login')">Log In</button>
       &nbsp;
-      <button @click="goSignup">Sign Up</button></p>
+      <button @click="goRoute('signup')">Sign Up</button>
+    </p>
   </div>
 </template>
 
@@ -13,6 +15,13 @@ export default {
   name: 'landing',
   data () {
     return {
+    }
+  },
+  methods: {
+    goRoute (name) {
+      if (name !== this.$route.name) {
+        return this.$router.push({ name })
+      }
     }
   }
 }
@@ -28,4 +37,4 @@ p {
 button {
   padding: 10px 5px 10px 5px;
 }
-</style>>
+</style>

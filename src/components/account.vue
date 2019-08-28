@@ -11,9 +11,8 @@ export default {
   name: 'account',
   computed: {
     ...mapGetters('user', [
-      getAccount
+      'getAccount'
     ])
   }
 }
 </script>
-

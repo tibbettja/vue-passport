@@ -7,7 +7,8 @@ import axios from 'axios'
  * @name HTTP
  */
 const HTTP = axios.create({
-  baseURL: "http://localhost:4000"
+  baseURL: 'http://localhost:8081/api',
+  withCredentials: true
 })
 
 /**

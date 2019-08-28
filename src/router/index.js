@@ -1,5 +1,6 @@
 import Vue from 'vue'
 import Router from 'vue-router'
+import checkLoggedIn from '../common/route-auth'
 import landing from '@/components/landing'
 import signup from '@/components/signup'
 import login from '@/components/login'
@@ -10,10 +11,11 @@ import forohfor from '@/components/forohfor'
 
 Vue.use(Router)
 
-export default new Router({
+const router = new Router({
+  mode: 'history',
   routes: [
     {
-      path: '/welcome',
+      path: '/',
       name: 'landing',
       component: landing
     },
@@ -49,3 +51,7 @@ export default new Router({
     }
   ]
 })
+
+router.beforeEach(checkLoggedIn)
+
+export default router
